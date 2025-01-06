@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This module defines a function to sum a list of floats and return the result as a float.
+Module defines a function to sum a list of floats and return the result as float.
 """
 
 from typing import List
@@ -8,7 +8,7 @@ from typing import List
 
 def sum_list(input_list: List[float]) -> float:
     """
-    Sums all the elements in a list of floats and returns the result as a float.
+    Sums all elements in a list of floats and returns result as float.
 
     Args:
         input_list (List[float]): The list of floats to sum.
