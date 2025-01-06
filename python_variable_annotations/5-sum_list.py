@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Module defines a function to sum a list of floats and return the result as float.
+Module defines a function to sum a list of floats and return result as float.
 """
 
 from typing import List
