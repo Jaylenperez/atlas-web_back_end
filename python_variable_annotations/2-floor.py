@@ -3,8 +3,8 @@
 This module provides a type-annotated function to compute the floor of a float.
 """
 
-
 import math
+
 
 def floor(n: float) -> int:
     """
