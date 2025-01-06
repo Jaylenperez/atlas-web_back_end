@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This module defines and annotates four variables with specific values and types.
+Module defines and annotates four variables with specific values and types.
 """
 
 a: int = 1
