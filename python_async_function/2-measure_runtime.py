@@ -26,7 +26,7 @@ wait_n = wait_n_module.wait_n
 def measure_time(n: int, max_delay: int) -> float:
     """
     Measures the total execution time for the `wait_n` coroutine and calculates
-    the average time per coroutine.
+    the average time per coroutine
 
     Args:
         n (int): The number of coroutines to execute.
