@@ -7,9 +7,9 @@ It inherits from the BaseCaching class and implements the LRU algorithm
 for managing cache items. If the cache exceeds a predefined limit (MAX_ITEMS),
 the least recently used item will be discarded to make space for new items.
 
-The LRUCache class uses an OrderedDict to maintain the order of items based on their
-usage. The most recently used items are at the end of the dictionary, and the
-least recently used items are at the start.
+The LRUCache class uses an OrderedDict to maintain the order of items based
+on their usage. The most recently used items are at the end of the dictionary,
+and the least recently used items are at the start.
 """
 
 from collections import OrderedDict
