@@ -4,7 +4,8 @@ from base_caching import BaseCaching
 
 
 class LRUCache(BaseCaching):
-    """LRUCache class that inherits from BaseCaching.
+    """
+    LRUCache class that inherits from BaseCaching.
 
     Implements an LRU (Least Recently Used) caching algorithm. The class
     manages a cache that stores a limited number of items. If the cache
@@ -17,7 +18,8 @@ class LRUCache(BaseCaching):
     """
 
     def __init__(self):
-        """Initializes the LRUCache instance.
+        """
+        Initializes the LRUCache instance.
 
         Sets up the cache with an OrderedDict to maintain
         the insertion order of items. Calls the parent class
@@ -28,7 +30,8 @@ class LRUCache(BaseCaching):
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
-        """Assigns item to the cache for the given key.
+        """
+        Assigns item to the cache for the given key.
 
         If the cache size exceeds MAX_ITEMS, the least recently used item
         is discarded. The item is marked as the most recently used by moving
@@ -61,7 +64,8 @@ class LRUCache(BaseCaching):
             print(f"DISCARD: {oldest_key}")
 
     def get(self, key):
-        """Returns the value associated with the given key.
+        """
+        Returns the value associated with the given key.
 
         If the key exists in the cache, the item is returned and marked as
         recently used by moving it to the end of the ordered dictionary.
