@@ -1,26 +1,41 @@
 #!/usr/bin/env python3
 """
-Module for filtering log messages.
+Module for filtering log messages and custom log formatting.
 """
 
-import re
+import logging
 from typing import List
+from utils import filter_datum
 
 
-def filter_datum(
-        fields: List[str], redaction: str, message: str, separator: str
-) -> str:
-    """
-    Obfuscates values of specified fields in a log message.
+class RedactingFormatter(logging.Formatter):
+    """ Redacting Formatter class """
 
-    Args:
-        fields (List[str]): List of fields to obfuscate.
-        redaction (str): String to replace sensitive data with.
-        message (str): Log message containing key-value pairs.
-        separator (str): Separator between fields in the log.
+    REDACTION = "***"
+    FORMAT = "[HOLBERTON] %(name)s %(levelname)s %(asctime)-15s: %(message)s"
+    SEPARATOR = ";"
 
-    Returns:
-        str: Obfuscated log message.
-    """
-    pattern = r'(' + '|'.join(fields) + r')=[^' + separator + r']*'
-    return re.sub(pattern, lambda m: f"{m.group(1)}={redaction}", message)
+    def __init__(self, fields: List[str]):
+        """
+        Initialize the RedactingFormatter with fields to obfuscate.
+
+        Args:
+            fields (List[str]): List of fields to obfuscate.
+        """
+        super(RedactingFormatter, self).__init__(self.FORMAT)
+        self.fields = fields
+
+    def format(self, record: logging.LogRecord) -> str:
+        """
+        Obfuscates sensitive fields in the log record's message.
+
+        Args:
+            record (logging.LogRecord): The log record to format.
+
+        Returns:
+            str: The formatted log record with obfuscated sensitive fields.
+        """
+        record.msg = filter_datum(
+            self.fields, self.REDACTION, record.msg, self.SEPARATOR
+        )
+        return super(RedactingFormatter, self).format(record)
