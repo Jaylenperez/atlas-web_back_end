@@ -11,7 +11,7 @@ def hash_password(password: str) -> bytes:
 
     Returns:
         bytes: The salted, hashed password.
-    
+
     Example:
         >>> hash_password("MyAmazingPassw0rd")
         b'$2b$12$Fnjf6ew.oPZtVksngJjh1.vYCnxRjPm2yt18kw6AuprMRpmhJVxJO'
