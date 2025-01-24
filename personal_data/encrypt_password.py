@@ -1,0 +1,23 @@
+import bcrypt
+
+
+def hash_password(password: str) -> bytes:
+    """
+    Hash a password using bcrypt and return the salted, hashed password.
+
+    Args:
+        password (str): The password to hash.
+
+    Returns:
+        bytes: The salted, hashed password.
+    """
+    # Encode the password to bytes
+    password_bytes = password.encode('utf-8')
+
+    # Generate a salt with the default work factor (12 rounds)
+    salt = bcrypt.gensalt(rounds=12)
+
+    # Hash the password with the salt
+    hashed_password = bcrypt.hashpw(password_bytes, salt)
+
+    return hashed_password
