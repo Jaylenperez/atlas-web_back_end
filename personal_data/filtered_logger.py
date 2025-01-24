@@ -95,3 +95,34 @@ def get_logger() -> logging.Logger:
     logger.addHandler(stream_handler)
 
     return logger
+
+def main():
+    """
+    Main function to filter and log data from the users table.
+    """
+    # Get a database connection
+    connection = get_db()
+
+    try:
+        cursor = connection.cursor(dictionary=True)
+        cursor.execute("SELECT * FROM users")
+        users = cursor.fetchall()
+
+        logger = get_logger()
+
+        for user in users:
+            # Format user data as a log message
+            log_message = "; ".join(
+                f"{key}={value}" for key, value in user.items()
+            )
+            # Log the filtered message
+            logger.info(log_message)
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+    finally:
+        cursor.close()
+        connection.close()
+
+
+if __name__ == "__main__":
+    main()
