@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Module for filtering log messages, custom log formatting, and database connection.
+Module for filtering log messages,
+custom log formatting, and database connection.
 """
 
 import logging
@@ -10,14 +11,19 @@ from typing import List
 from utils import filter_datum
 
 # Define the fields considered as Personally Identifiable Information (PII)
-PII_FIELDS = ("name", "email", "phone", "ssn", "password")
+PII_FIELDS = (
+    "name", "email", "phone", "ssn", "password"
+)
+
 
 def get_db() -> mysql.connector.connection.MySQLConnection:
     """
-    Returns a connector to the MySQL database using environment variables for credentials.
+    Returns a connector to the MySQL database using environment
+    variables for credentials.
 
     Returns:
-        mysql.connector.connection.MySQLConnection: Database connection object.
+        mysql.connector.connection.MySQLConnection: Database
+        connection object.
     """
     db_user = os.getenv("PERSONAL_DATA_DB_USERNAME", "root")
     db_password = os.getenv("PERSONAL_DATA_DB_PASSWORD", "")
@@ -35,7 +41,7 @@ def get_db() -> mysql.connector.connection.MySQLConnection:
         host=db_host,
         database=db_name
     )
-    
+
     return connection
 
 
