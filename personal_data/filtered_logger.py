@@ -46,23 +46,18 @@ class RedactingFormatter(logging.Formatter):
 
 def get_logger() -> logging.Logger:
     """
-    Creates and configures a logger with a RedactingFormatter.
+    Creates and configures a logger for filtering user data logs.
 
     Returns:
         logging.Logger: Configured logger instance.
     """
-    # Create a logger named "user_data"
     logger = logging.getLogger("user_data")
-
-    # Set logging level to INFO
     logger.setLevel(logging.INFO)
-
-    # Prevent propagation of log messages to ancestor loggers
     logger.propagate = False
 
-    # Create a StreamHandler
+    # Create a StreamHandler and set RedactingFormatter as its formatter
     stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(RedactingFormatter(fields=PII_FIELDS))
+    logger.addHandler(stream_handler)
 
-    # Use RedactingFormatter with PII_FIELDS
-    formatter = RedactingFormatter(fields=PII_FIELDS)
-    stream_ha
+    return logger
