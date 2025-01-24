@@ -7,6 +7,9 @@ import logging
 from typing import List
 from utils import filter_datum
 
+# Define the fields considered as Personally Identifiable Information (PII)
+PII_FIELDS = ("name", "email", "phone", "ssn", "password")
+
 
 class RedactingFormatter(logging.Formatter):
     """ Redacting Formatter class """
@@ -39,3 +42,27 @@ class RedactingFormatter(logging.Formatter):
             self.fields, self.REDACTION, record.msg, self.SEPARATOR
         )
         return super(RedactingFormatter, self).format(record)
+
+
+def get_logger() -> logging.Logger:
+    """
+    Creates and configures a logger with a RedactingFormatter.
+
+    Returns:
+        logging.Logger: Configured logger instance.
+    """
+    # Create a logger named "user_data"
+    logger = logging.getLogger("user_data")
+
+    # Set logging level to INFO
+    logger.setLevel(logging.INFO)
+
+    # Prevent propagation of log messages to ancestor loggers
+    logger.propagate = False
+
+    # Create a StreamHandler
+    stream_handler = logging.StreamHandler()
+
+    # Use RedactingFormatter with PII_FIELDS
+    formatter = RedactingFormatter(fields=PII_FIELDS)
+    stream_ha
