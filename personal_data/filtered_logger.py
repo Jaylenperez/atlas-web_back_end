@@ -1,14 +1,42 @@
 #!/usr/bin/env python3
 """
-Module for filtering log messages and custom log formatting.
+Module for filtering log messages, custom log formatting, and database connection.
 """
 
 import logging
+import os
+import mysql.connector
 from typing import List
 from utils import filter_datum
 
 # Define the fields considered as Personally Identifiable Information (PII)
 PII_FIELDS = ("name", "email", "phone", "ssn", "password")
+
+def get_db() -> mysql.connector.connection.MySQLConnection:
+    """
+    Returns a connector to the MySQL database using environment variables for credentials.
+
+    Returns:
+        mysql.connector.connection.MySQLConnection: Database connection object.
+    """
+    db_user = os.getenv("PERSONAL_DATA_DB_USERNAME", "root")
+    db_password = os.getenv("PERSONAL_DATA_DB_PASSWORD", "")
+    db_host = os.getenv("PERSONAL_DATA_DB_HOST", "localhost")
+    db_name = os.getenv("PERSONAL_DATA_DB_NAME")
+
+    # Check if db_name is set, since it is required
+    if not db_name:
+        raise ValueError("Database name (PERSONAL_DATA_DB_NAME) must be set.")
+
+    # Connect to the MySQL database
+    connection = mysql.connector.connect(
+        user=db_user,
+        password=db_password,
+        host=db_host,
+        database=db_name
+    )
+    
+    return connection
 
 
 class RedactingFormatter(logging.Formatter):
