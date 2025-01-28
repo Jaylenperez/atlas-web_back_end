@@ -42,9 +42,11 @@ class Auth:
         Arguments:
             request: Flask request object
         Return:
-            None (default, for now)
+            None if the header is missing, or the value of the header
         """
-        return None
+        if request is None:
+            return None
+        return request.headers.get('Authorization')
 
     def current_user(self, request=None) -> TypeVar('User'):
         """
