@@ -47,3 +47,4 @@ class SessionAuth(Auth):
             return None
         
         return self.__class__.user_id_by_session_id.get(session_id)
+    
