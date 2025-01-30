@@ -51,7 +51,6 @@ class DB:
         session.commit()  # Commit to persist changes
         return new_user  # Return the created user
 
-
     def find_user_by(self, **kwargs) -> User:
         """
         Find a user by given keyword arguments.
