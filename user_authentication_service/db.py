@@ -86,7 +86,8 @@ class DB:
 
         Args:
             user_id (int): The ID of the user to update.
-            **kwargs: Arbitrary keyword arguments representing fields to update.
+            **kwargs: Arbitrary keyword arguments representing
+            fields to update.
 
         Raises:
             ValueError: If an invalid attribute is passed.
