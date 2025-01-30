@@ -7,12 +7,14 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)  # Initialize Flask app
 
+
 @app.route("/", methods=["GET"])
 def home():
     """
     Root route that returns a welcome message.
     """
     return jsonify({"message": "Bienvenue"})
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)  # Run Flask app
