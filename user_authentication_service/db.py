@@ -79,3 +79,29 @@ class DB:
             raise NoResultFound("No user found with given criteria.")
 
         return user
+
+    def update_user(self, user_id: int, **kwargs) -> None:
+        """
+        Update a user's attributes in the database.
+
+        Args:
+            user_id (int): The ID of the user to update.
+            **kwargs: Arbitrary keyword arguments representing fields to update.
+
+        Raises:
+            ValueError: If an invalid attribute is passed.
+            NoResultFound: If the user is not found.
+        """
+        session = self._session  # Get the session
+        user = self.find_user_by(id=user_id)  # Locate the user
+
+        # Ensure all provided keys are valid column names
+        for key in kwargs.keys():
+            if not hasattr(User, key):
+                raise ValueError(f"Invalid attribute: {key}")
+
+        # Update user attributes
+        for key, value in kwargs.items():
+            setattr(user, key, value)
+
+        session.commit()  # Commit changes
