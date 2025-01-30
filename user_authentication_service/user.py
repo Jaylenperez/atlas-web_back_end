@@ -29,6 +29,12 @@ class User(Base):
     reset_token = Column(String(250))
 
     def __repr__(self):
-        return 
-        "<User(email='%s', hashed_password='$s', session_id='$s', reset_token='$s')>" % (
-                        self.email, self.hashed_password, self.session_id, self.reset_token)
+        return (
+            "<User(email='{email}', hashed_password='{hashed_password}', "
+            "session_id='{session_id}', reset_token='{reset_token}')>".format(
+                email=self.email,
+                hashed_password=self.hashed_password,
+                session_id=self.session_id,
+                reset_token=self.reset_token
+            )
+        )
