@@ -11,7 +11,8 @@ class Cache:
         """Initialize Redis connection and flush database."""
         self._redis = redis.Redis()
         self._redis.flushdb()
-
+    
+    @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """
         Store data in Redis with a randomly genereated key.
@@ -42,10 +43,7 @@ class Cache:
             key = method.__qualname__  # Use the qualified name of the method as the Redis key
             self._redis.incr(key)  # Increment the call count for the method
             return method(self, *args, **kwargs)  # Call the original method and return its result
-
         return wrapper
-
-    store = count_calls(store)
     
     def get(self, key: str, fn: Optional[Callable] = None) -> Union[str, int, bytes, None]:
         """
