@@ -10,15 +10,6 @@ Project Overview:
 
 * Understand data storage and retrieval in Redis.
 
-## :card_index_dividers: Table of Contents
-<details>
-        <summary>
-        CLICK HERE!!
-        </summary>
-        :camera: <a href="#photos">Photos</a>
-        <br>
-        :bust_in_silhouette: <a href="#authors">Authors</a>
-</details>
 
 ## :camera: <span id="photos">Photos</span>
 
