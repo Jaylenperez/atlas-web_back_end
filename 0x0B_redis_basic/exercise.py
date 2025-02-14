@@ -103,14 +103,14 @@ class Cache:
         return int(data)
     
 
-    def replay(method: Callable):
+    def replay(self, method: Callable):
         """
         Display the history of calls of a decorated method.
-
+        
         Args:
             method (Callable): The decorated method to replay.
         """
-        redis_instance = method.__self__._redis  # Access the Redis instance
+        redis_instance = self._redis  # Access the Redis instance
         method_name = method.__qualname__  # Get the qualified name of the method
 
         # Get input and output lists from Redis
@@ -123,5 +123,5 @@ class Cache:
         # Iterate over inputs and outputs and print the call history
         for input_args, output in zip(inputs, outputs):
             input_str = input_args.decode("utf-8")  # Decode bytes to string
-            output_str = output.decode("utf-8")
+            output_str = output.decode("utf-8") if output else "None"  # Handle None case
             print(f"{method_name}(*{input_str}) -> {output_str}")
