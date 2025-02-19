@@ -1,5 +1,11 @@
-// Update documents in the "school" collection to add a new attribute
-db.school.updateMany(
-    { name: "Holberton school" },  // Filter for matching documents
-    { $set: { address: "972 Mission street" } }  // Set the new attribute
-)
+// Check if the "school" collection is empty
+if (db.school.countDocuments() === 0) {
+    print("The collection is empty.");
+} else {
+    // Update documents in the "school" collection to add a new attribute
+    const result = db.school.updateMany(
+        { name: "Holberton school" },  // Filter for matching documents
+        { $set: { address: "972 Mission street" } }  // Set the new attribute
+    );
+    printjson(result); // Output the result of the update
+}
