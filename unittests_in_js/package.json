@@ -1,15 +1,15 @@
 {
-  "name": "unittests_in_js",
+  "name": "tests",
   "version": "1.0.0",
-  "description": "not empty",
-  "main": "index.js",
+  "description": "",
+  "main": "0-calcul.js",
   "scripts": {
-    "test": "mocha '**/*.test.js'"
+    "test": "mocha ./0-calcul.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^11.1.0"
+    "mocha": "^9.2.2"
   }
 }
