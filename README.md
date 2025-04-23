@@ -38,7 +38,7 @@ This is a centralized collection of back-end web development projects.
 - **Node_JS**
   Custom form controls, validation strategies, and accessibility-friendly form markup.
 - **Unittests_and_integration_tests**
-  Semantic HTML5 elements, microdata, SEO metadata, and progressive enhancement techniques.
+  covers both **unit** and **integration** testing in Python using the built-in `unittest` framework, `unittest.mock`
 - **caching**
   Implement and compare several cache replacement policies.
 - **localization**
