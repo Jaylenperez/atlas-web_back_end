@@ -40,7 +40,7 @@ This is a centralized collection of back-end web development projects.
 - **Unittests_and_integration_tests**
   Semantic HTML5 elements, microdata, SEO metadata, and progressive enhancement techniques.
 - **caching**
-  Managing document metadata, linking external resources, and optimizing the `<head>` for performance.
+  Implement and compare several cache replacement policies.
 - **localization**
   Scaffolded Sass/SCSS projects demonstrating variables, mixins, nesting, and partials for maintainable stylesheets.
 - **pagination**
