@@ -44,6 +44,7 @@ This is a centralized collection of back-end web development projects.
 - **localization**
   Scaffolded Sass/SCSS projects demonstrating variables, mixins, nesting, and partials for maintainable stylesheets.
 - **pagination**
+  implement three styles of pagination over a CSV dataset of popular baby names
 - **personal_data**
   build a secure personal-data handling pipeline in Python.
 - **python_async_comprehension**
