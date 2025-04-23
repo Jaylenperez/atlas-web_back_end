@@ -52,6 +52,7 @@ This is a centralized collection of back-end web development projects.
 - **python_variable_annotations**
   The Python – Variable Annotations project takes you deep into Python 3’s type hinting and static typing features.
 - **queuing_systems_in_js**
+  build a simple background‐job system in Node.js using Redis and Kue.
 - **unittests_in_js**
 - **user_authentication_service**
 
