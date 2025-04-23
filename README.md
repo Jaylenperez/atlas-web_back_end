@@ -42,7 +42,7 @@ This is a centralized collection of back-end web development projects.
 - **caching**
   Implement and compare several cache replacement policies.
 - **localization**
-  Scaffolded Sass/SCSS projects demonstrating variables, mixins, nesting, and partials for maintainable stylesheets.
+  internationalization (i18n) support to a Python backend using Babel.
 - **pagination**
   implement three styles of pagination over a CSV dataset of popular baby names
 - **personal_data**

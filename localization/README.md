@@ -1,29 +1,30 @@
-# <p align="center">LOCALIZATION</p>
-> This project focuses on internalization (i18n) of backend strings using Babel, a Python tool. Babel helps localize Python applications by extracting and translating strings.
+# <p align="center">Localization</p>
 
-## :card_index_dividers: Table of Contents
+## :bookmark: Table of Contents
+
 <details>
         <summary>
-        CLICK HERE!!
+        CLICK TO ENLARGE
         </summary>
-        :open_book: <a href="#description">Description</a>
+        :memo: <a href="#description">Description</a>
         <br>
-        :brain: <a href="#learning objective">Learning Objective</a>
+        :wrench: <a href="#installation">Installation</a>
         <br>
-        :bust_in_silhouette: <a href="#authors">Authors</a>
+        :sparkles: <a href="#authors">Authors</a>
 </details>
 
-## :open_book: <span id="description">Description</span>
-Provide an overview of what your project does, its purpose, and key features.
-## :brain: <span id="learning objective">Learning Objective</span>
+## :memo: <span id="description">Description</span>
 
-By the end of this project, you should be able to:
+This project will guide you through adding internationalization (i18n) support to a Python backend using Babel. You’ll learn how to mark strings for translation, extract them into template files, initialize and compile language catalogs, and integrate translations at runtime (e.g., in a Flask app).
 
-* this
-* this too
-* and this
+## :wrench: <span id="installation">Installation</span>
 
-## :bust_in_silhouette: <span id="authors">Authors</span>
+**Clone the repository**
+
+`git clone https://github.com/Jaylenperez/localization.git`
+
+## :sparkles: <span id="authors">Authors</span>
 
 **Jaylen Perez**
+
 - Github: [@Jaylenperez](https://github.com/Jaylenperez)
