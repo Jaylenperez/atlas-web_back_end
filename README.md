@@ -45,6 +45,7 @@ This is a centralized collection of back-end web development projects.
   Scaffolded Sass/SCSS projects demonstrating variables, mixins, nesting, and partials for maintainable stylesheets.
 - **pagination**
 - **personal_data**
+  build a secure personal-data handling pipeline in Python.
 - **python_async_comprehension**
   In this project, you will explore Python’s asynchronous generators and comprehensions.
 - **python_async_function**
