@@ -22,7 +22,7 @@ This is a centralized collection of back-end web development projects.
 - **0x0B_redis_basic**
   Hands-on examples and layouts using the Bootstrap framework for responsive, mobile-first sites.
 - **Basic_authentication**
-  Deep dives into selectors, specificity, advanced layouts, and modern CSS features (variables, grid, custom properties).
+  how HTTP Basic Authentication works under the hood by building it step-by-step on a simple Flask API.
 - **ES6_basic**
   Practical exercises for persisting data in the browser via cookies and the Web Storage API (localStorage & sessionStorage).
 - **ES6_classes**
