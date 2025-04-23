@@ -54,6 +54,7 @@ This is a centralized collection of back-end web development projects.
 - **queuing_systems_in_js**
   build a simple background‐job system in Node.js using Redis and Kue.
 - **unittests_in_js**
+  master unit and integration testing in Node.js using Mocha, Chai, and Sinon.
 - **user_authentication_service**
 
 ## :sparkles: <span id="about-me">About Me</span>
