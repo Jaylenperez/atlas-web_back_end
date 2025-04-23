@@ -46,6 +46,7 @@ This is a centralized collection of back-end web development projects.
 - **pagination**
 - **personal_data**
 - **python_async_comprehension**
+  In this project, you will explore Python’s asynchronous generators and comprehensions.
 - **python_async_function**
   This project introduces you to asynchronous programming in Python using the `asyncio` library.
 - **python_variable_annotations**
