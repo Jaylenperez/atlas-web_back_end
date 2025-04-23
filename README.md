@@ -47,6 +47,7 @@ This is a centralized collection of back-end web development projects.
 - **personal_data**
 - **python_async_comprehension**
 - **python_async_function**
+  This project introduces you to asynchronous programming in Python using the `asyncio` library.
 - **python_variable_annotations**
   The Python – Variable Annotations project takes you deep into Python 3’s type hinting and static typing features.
 - **queuing_systems_in_js**
