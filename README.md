@@ -37,6 +37,8 @@ This is a centralized collection of back-end web development projects.
   Interactive examples illustrating CSS Flexbox layouts, alignment, and responsive design patterns.
 - **Node_JS**
   Custom form controls, validation strategies, and accessibility-friendly form markup.
+- **Session_authentication**
+  implement session-based authentication from scratch, without installing any external modules.
 - **Unittests_and_integration_tests**
   covers both **unit** and **integration** testing in Python using the built-in `unittest` framework, `unittest.mock`
 - **caching**
@@ -58,6 +60,7 @@ This is a centralized collection of back-end web development projects.
 - **unittests_in_js**
   master unit and integration testing in Node.js using Mocha, Chai, and Sinon.
 - **user_authentication_service**
+  guides you through each step of building your own authentication mechanism
 
 ## :sparkles: <span id="about-me">About Me</span>
 
