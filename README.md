@@ -34,7 +34,7 @@ This is a centralized collection of back-end web development projects.
 - **MySQL_Advanced**
   Tips and configurations for Chrome DevTools, VS Code debugging, and other productivity enhancements.
 - **NoSQL**
-  Interactive examples illustrating CSS Flexbox layouts, alignment, and responsive design patterns.
+  introduces you to the world of NoSQL databases with a focus on MongoDB.
 - **Node_JS**
   building and organizing Node and Express applications from scratch.
 - **Session_authentication**
