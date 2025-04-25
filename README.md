@@ -36,7 +36,7 @@ This is a centralized collection of back-end web development projects.
 - **NoSQL**
   Interactive examples illustrating CSS Flexbox layouts, alignment, and responsive design patterns.
 - **Node_JS**
-  Custom form controls, validation strategies, and accessibility-friendly form markup.
+  building and organizing Node and Express applications from scratch.
 - **Session_authentication**
   implement session-based authentication from scratch, without installing any external modules.
 - **Unittests_and_integration_tests**
